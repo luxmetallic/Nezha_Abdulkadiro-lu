@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Visual Business Card</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <style>
+    body {
+      background-color: #f2f2f2; /* Dark background color */
+      font-family: Arial, sans-serif;
+      color: #fff; /* Text color */
+      margin: 0; /* Remove default margin */
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #f2f2f2;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      text-align: center;
+      position: relative;
+    }
+
+    h1 {
+      font-size: 26px;
+      font-family: "HelveticaNeueCyr", sans-serif;
+      font-weight: 300; /* 700 is typically used for bold font weight */
+      color: #fff;
+      text-align: right;
+      margin: 10px auto;
+    }
+
+    h2 {
+      font-size: 17px;
+      font-family: "Soria", sans-serif;
+      color: #fff;
+      text-align: right;
+      margin: 15px auto;
+    }
+
+.pic-container {
+  background-color: #000;
+  max-width: 465px;
+  max-height: 206px;
+  background-image: url('Dr b.jpeg'); /* Corrected the URL */
+  display: flex;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  flex-direction: row; /* Display items in a row */
+  align-items: center;
+  margin: 20px auto;
+}
+
+    /* Style the profile picture */
+    .pic img {
+      max-width: 100%;
+      height: auto;
+      margin-right: 55px; /* Add some spacing between the picture and text */
+    }
+
+    /* Removed .pic a CSS rules */
+
+    .icon {
+      font-size: 30px;
+      color: #0077b5;
+    }
+
+    /* Create a container for social icons */
+    .social-icons-container {
+      background-color: #000;
+      max-width: 465px;
+      height: 60px; /* Reduce the height */
+      display: flex;
+      justify-content: center;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      align-items: center;
+      margin: 5px auto; /* Center the container horizontally */
+    }
+
+    .social-icons-container a {
+      margin-right: 20px; /* Adjust spacing between icons */
+    }
+
+    /* Move the button to the left side */
+    .save-contact {
+      text-align: right; /* Center the button text */
+      margin-right: 165px;
+      margin-top: 20px; /* Adjust the top margin */
+    }
+
+    .save-contact a {
+      text-decoration: none; /* Remove underlines from the link */
+    }
+
+    .save-contact img {
+      vertical-align: middle;
+      margin-right: 0px;
+    }
+
+    .save-contact:hover img {
+      transform: scale(1.2);
+      color: #0077b5;
+    }
+
+    /* Media query for mobile screens */
+    @media (max-width: 480px) {
+      .container {
+        padding: 10px; /* Reduce padding for smaller screens */
+      }
+
+     h1 {
+      font-size: 16px;
+      text-align: center;
+      margin-left: 0.5px; /* Add some spacing between the picture and text */
+    }
+
+    h2 {
+      font-size: 15px;
+      text-align: center;
+      margin-left: 1px; /* Add some spacing between the picture and text */
+    }
+      
+    .pic img {
+      max-width: 100%;
+      height: auto;
+      margin-right: 0.5px; /* Add some spacing between the picture and text */
+      text-align: left;
+    }
+
+    .icon {
+      font-size: 30px;
+      color: #0077b5;
+      margin-bottom: 5px;
+    }
+
+      .social-icons-container {
+        max-width: 100%; /* Adjust max-width for mobile screens */
+        flex-wrap: wrap; /* Allow icons to wrap to the next line */
+      }
+
+      .social-icons-container a {
+        margin: 2px; /* Adjust spacing between icons for mobile screens */
+        margin-top: 0px;
+        margin-bottom: 0px;
+      }
+
+      .save-contact {
+        margin-left: 1px;
+        margin: 20px auto; /* Center the button horizontally */
+      }
+    }
+  </style>
+
+<script>
+  function saveContact() {
+    // Get the contact information
+    var name = "Nezha Abdulkadiroğlu";
+    var phoneNumber1 = "+971566974403";
+    var phoneNumber2 = "+971566974403";
+    var whatsappNumber = "+971547451955";
+    var email = "nabdulkadiroglu@atisglobal.com";
+    var websiteUrl = "www.atisyapi.com.tr";
+
+
+    var vCard = `BEGIN:VCARD
+VERSION:3.0
+N:${name};;;;
+TEL;TYPE=CELL:${phoneNumber1}
+TEL;TYPE=CELL:${phoneNumber2}
+TEL;TYPE=WHATSAPP:${whatsappNumber}
+EMAIL:${email}
+URL:${websiteUrl}
+END:VCARD`;
+
+    var dataUrl = "data:text/vcard;charset=utf-8," + encodeURIComponent(vCard);
+
+    window.open(dataUrl);
+  }
+</script>
+
+</head>
+<body>
+<div class="container">
+  <div class="pic-container">
+    <div class="pic"><img src="atis.jpg" alt="Profile Picture"></div>
+  </div>
+
+  <div class="social-icons-container">
+    <a href="https://wa.link/5bfxvv"><img src="whatsapp.png" alt="WhatsApp"></a>
+    <a href="https://www.atisyapi.com.tr"><img src="web.png" style="width: 64px;"></a>
+    <a href="mailto:nabdulkadiroglu@atisglobal.com"><img src="mail.png" alt="Email"></a>
+  </div>
+
+  <div class="save-contact">
+    <a href="#" onclick="saveContact()">
+      <img src="d.png" alt="Save Contact">
+    </a>
+  </div>
+</div>
+</body>
+</html>
