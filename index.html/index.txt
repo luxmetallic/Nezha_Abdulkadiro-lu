@@ -159,7 +159,7 @@
     // Get the contact information
     var name = "Nezha Abdulkadiroğlu";
     var phoneNumber1 = "+971566974403";
-    var phoneNumber2 = "+971566974403";
+    var phoneNumber2 = "+971547451955";
     var whatsappNumber = "+971547451955";
     var email = "nabdulkadiroglu@atisglobal.com";
     var websiteUrl = "www.atisyapi.com.tr";
@@ -189,7 +189,7 @@ END:VCARD`;
   </div>
 
   <div class="social-icons-container">
-    <a href="https://wa.link/5bfxvv"><img src="whatsapp.png" alt="WhatsApp"></a>
+    <a href="https://wa.link/h28ls4"><img src="whatsapp.png" alt="WhatsApp"></a>
     <a href="https://www.atisyapi.com.tr"><img src="web.png" style="width: 64px;"></a>
     <a href="mailto:nabdulkadiroglu@atisglobal.com"><img src="mail.png" alt="Email"></a>
   </div>
